@@ -231,7 +231,7 @@ class InducedGraphTest(unittest.TestCase):
                          co.induced_graph(part, graph).size(weight='weight'))
 
         for e1, e2 in graph.edges():
-            graph[e1][e2]["test_weight"] = 1.
+            graph[e1][e2]["test_weight"] = 2.
 
         self.assertEqual(graph.size(weight='test_weight'),
                          co.induced_graph(part, graph, "test_weight").size(weight='test_weight'))
